@@ -1,0 +1,2188 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #10111c;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+:root {
+
+    --purple: #5421d6;
+    --purple-dark: #4214bd;
+
+    --purple-light: #f0ebff;
+
+    --text: #11121f;
+    --muted: #626471;
+
+    --border: #e9e8ef;
+
+    --yellow: #ffbd13;
+
+    --white: #ffffff;
+
+    --section-bg: #fbfaff;
+
+    --shadow:
+        0 7px 25px rgba(43, 27, 93, 0.08);
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    height: 68px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeF2;
+}
+
+.nav-wrapper {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* REAL LOGO */
+
+.brand {
+    width: 104px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 104px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: #242532;
+
+    transition: .2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+
+/* NAV BUTTON */
+
+.nav-enroll {
+    display: flex;
+
+    align-items: center;
+    gap: 7px;
+
+    padding: 11px 17px;
+
+    color: white !important;
+
+    background: var(--purple);
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 5px 15px rgba(84, 33, 214, .22);
+}
+
+.nav-enroll:hover {
+    background: var(--purple-dark);
+}
+
+
+/* MOBILE NAV */
+
+.mobile-menu {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    border-radius: 7px;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        58px 0
+        58px;
+
+    background:
+
+        radial-gradient(
+            circle at 72% 45%,
+            #eee8ff 0%,
+            #ffffff 38%
+        );
+
+}
+
+
+.hero-grid {
+
+    min-height: 490px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+/* HERO TEXT */
+
+.hero-left {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-label {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .35px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 570px;
+
+    font-size:
+        clamp(42px, 5vw, 62px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 800;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--purple);
+
+    display: block;
+
+}
+
+
+.hero-description {
+
+    max-width: 470px;
+
+    margin-top: 21px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+}
+
+
+/* =====================================================
+   HERO FEATURES
+===================================================== */
+
+.hero-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+    max-width: 530px;
+
+    margin-top: 26px;
+
+}
+
+
+.hero-feature {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.feature-icon {
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    font-size: 14px;
+
+}
+
+
+.hero-feature p {
+
+    color: #333541;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        12px 20px;
+
+    background: var(--purple);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px rgba(84, 33, 214, .22);
+
+    transition: .2s;
+
+}
+
+
+.primary-button:hover {
+
+    background:
+        var(--purple-dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.watch-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    background: transparent;
+
+    color: #30313c;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.watch-icon {
+
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        2px solid var(--purple);
+
+    border-radius: 50%;
+
+    color: var(--purple);
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================================
+   HERO RIGHT
+===================================================== */
+
+.hero-right {
+
+    height: 510px;
+
+    position: relative;
+
+}
+
+
+.person-container {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 455px;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+}
+
+
+.hero-person {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position:
+        center bottom;
+
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.floating-card {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px;
+
+    background: white;
+
+    border:
+        1px solid #eeeeF2;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 25px rgba(40, 28, 83, .10);
+
+}
+
+
+.learners {
+
+    top: 50px;
+
+    right: 0;
+
+}
+
+
+.rating {
+
+    top: 137px;
+
+    right: 0;
+
+}
+
+
+.floating-icon {
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 7px;
+
+    display: grid;
+    place-items: center;
+
+}
+
+
+.floating-icon.purple {
+
+    background:
+        var(--purple-light);
+
+    color:
+        var(--purple);
+
+}
+
+
+.floating-icon.yellow {
+
+    background:
+        #fff6d9;
+
+    color:
+        var(--yellow);
+
+}
+
+
+.floating-card strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.floating-card small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #7a7b85;
+
+    font-size: 7px;
+
+}
+
+
+/* HERO QUOTE */
+
+.hero-quote {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 43px;
+
+    width: 218px;
+
+    padding: 16px;
+
+    background: white;
+
+    border:
+        1px solid #eeeeF2;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 25px rgba(40, 28, 83, .10);
+
+}
+
+
+.quote-mark {
+
+    color: var(--purple);
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.hero-quote p {
+
+    color: #4d4e59;
+
+    font-size: 9px;
+
+    line-height: 1.55;
+
+    margin-bottom: 11px;
+
+}
+
+
+.hero-quote strong {
+
+    font-size: 8px;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+    padding:
+        70px 0;
+
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 37px;
+
+}
+
+
+.section-title span {
+
+    color: var(--purple);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+}
+
+
+.section-title h2 {
+
+    margin-top: 8px;
+
+    font-size:
+        clamp(24px, 3vw, 32px);
+
+    line-height: 1.2;
+
+    letter-spacing: -.7px;
+
+}
+
+
+.section-title h2 b {
+
+    color: var(--purple);
+
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits {
+
+    background: white;
+
+}
+
+
+.benefit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.benefit-card {
+
+    padding: 26px 18px;
+
+    text-align: center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: white;
+
+    transition: .25s;
+
+}
+
+
+.benefit-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(84, 33, 214, .08);
+
+}
+
+
+.benefit-icon {
+
+    width: 43px;
+    height: 43px;
+
+    margin:
+        0 auto 16px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--purple-light);
+
+    color:
+        var(--purple);
+
+    font-size: 16px;
+
+}
+
+
+.benefit-card h3 {
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.benefit-card p {
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   CURRICULUM
+===================================================== */
+
+.curriculum {
+
+    background:
+        #fbfaff;
+
+}
+
+
+.curriculum-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        335px 1fr;
+
+    gap: 20px;
+
+}
+
+
+.lessons {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+}
+
+
+.lesson {
+
+    display: grid;
+
+    grid-template-columns:
+        39px 1fr;
+
+    gap: 10px;
+
+    padding: 11px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.lesson:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.lesson.active,
+.lesson:hover {
+
+    background:
+        #faf8ff;
+
+}
+
+
+.lesson-number {
+
+    width: 33px;
+    height: 33px;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        var(--purple-light);
+
+    color:
+        var(--purple);
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.lesson h3 {
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.lesson p {
+
+    color: #747580;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+
+}
+
+
+/* VIDEO */
+
+.course-video {
+
+    min-width: 0;
+
+}
+
+
+.video-image {
+
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background: #191321;
+
+}
+
+
+.video-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.video-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(20, 5, 35, .15);
+
+}
+
+
+.video-play {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--purple);
+
+    font-size: 13px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.25);
+
+}
+
+
+.video-stats {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 91%;
+
+    margin:
+        -18px auto 0;
+
+    padding: 16px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow:
+        var(--shadow);
+
+    text-align: center;
+
+}
+
+
+.video-stats strong {
+
+    display: block;
+
+    color: var(--purple);
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.video-stats span {
+
+    color: #73747e;
+
+    font-size: 8px;
+
+}
+
+
+/* =====================================================
+   REVIEWS
+===================================================== */
+
+.reviews {
+
+    background: white;
+
+}
+
+
+.review-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.review-card {
+
+    padding: 20px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: white;
+
+}
+
+
+.stars {
+
+    color:
+        #f7b91b;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.review-card > p {
+
+    color: #4e4f5b;
+
+    font-size: 10px;
+
+    line-height: 1.55;
+
+    margin-bottom: 16px;
+
+}
+
+
+.review-person {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.avatar {
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7a5bea,
+            #4321bd
+        );
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.review-person strong {
+
+    font-size: 9px;
+
+}
+
+
+.dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 18px;
+
+}
+
+
+.dots span {
+
+    width: 6px;
+    height: 6px;
+
+    background: #ded9ef;
+
+    border-radius: 50%;
+
+}
+
+
+.dots span.active {
+
+    background:
+        var(--purple);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-section {
+
+    padding:
+        0 0 65px;
+
+}
+
+
+.cta-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        18px 30px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            100deg,
+            #4920c5,
+            #7440e5
+        );
+
+    box-shadow:
+        0 9px 25px
+        rgba(84,33,214,.2);
+
+}
+
+
+.cta-rocket {
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.14);
+
+}
+
+
+.cta-text {
+
+    flex: 1;
+
+}
+
+
+.cta-text h2 {
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.cta-text p {
+
+    color: #e9e3ff;
+
+    font-size: 9px;
+
+}
+
+
+.cta-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        11px 21px;
+
+    background: white;
+
+    color: var(--purple);
+
+    border-radius: 6px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq {
+
+    background:
+        #fbfaff;
+
+}
+
+
+.faq-wrapper {
+
+    max-width: 760px;
+
+    margin: auto;
+
+}
+
+
+.faq-item {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 9px;
+
+}
+
+
+.faq-question {
+
+    width: 100%;
+
+    padding:
+        16px 18px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+}
+
+
+.faq-question i {
+
+    color: var(--purple);
+
+    transition:
+        transform .25s;
+
+}
+
+
+.faq-item.open
+.faq-question i {
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height .3s ease;
+
+}
+
+
+.faq-answer p {
+
+    padding:
+        0 18px 16px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    padding:
+        35px 0;
+
+    background:
+        #111019;
+
+}
+
+
+.footer-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-logo {
+
+    width: 105px;
+
+    height: auto;
+
+}
+
+
+.footer-inner p {
+
+    color: #9998a4;
+
+    font-size: 10px;
+
+}
+
+
+.socials {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.socials a {
+
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    color: #bbb9c4;
+
+    background:
+        #25232d;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+}
+
+
+.socials a:hover {
+
+    color: white;
+
+    background:
+        var(--purple);
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    place-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(10,8,18,.78);
+
+}
+
+
+.modal.show {
+
+    display: grid;
+
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    width:
+        min(700px, 100%);
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+    background: white;
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    z-index: 4;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.2);
+
+}
+
+
+.modal-video {
+
+    height: 390px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle,
+            #633bc2,
+            #100b19
+        );
+
+}
+
+
+.modal-video i {
+
+    font-size: 28px;
+
+}
+
+
+.modal-video span {
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 40px);
+
+    }
+
+
+    .nav-links {
+
+        gap: 18px;
+
+    }
+
+
+    .hero-grid {
+
+        gap: 10px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-right {
+
+        transform:
+            scale(.92);
+
+    }
+
+
+    .benefit-grid {
+
+        gap: 10px;
+
+    }
+
+
+    .curriculum-grid {
+
+        grid-template-columns:
+            290px 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 30px);
+
+    }
+
+
+    /* NAV */
+
+    .navbar {
+
+        height: 64px;
+
+    }
+
+
+    .mobile-menu {
+
+        display: grid;
+
+        place-items: center;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 64px;
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 15px 16px;
+
+        background: white;
+
+        box-shadow:
+            0 12px 25px
+            rgba(0,0,0,.08);
+
+    }
+
+
+    .nav-links.open {
+
+        display: flex;
+
+    }
+
+
+    .nav-links > a:not(.nav-enroll) {
+
+        padding: 13px 8px;
+
+        border-bottom:
+            1px solid #f0eff4;
+
+    }
+
+
+    .nav-enroll {
+
+        justify-content: center;
+
+        margin-top: 10px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding:
+            45px 0 30px;
+
+    }
+
+
+    .hero-grid {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .hero-left {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(38px, 9vw, 53px);
+
+        letter-spacing:
+            -1.7px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+
+    }
+
+
+    .hero-features {
+
+        width: 100%;
+
+        max-width: 520px;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-right {
+
+        height: 470px;
+
+        transform: none;
+
+        margin-top: 10px;
+
+    }
+
+
+    .person-container {
+
+        width: 390px;
+
+        max-width: 90%;
+
+        height: 455px;
+
+    }
+
+
+    .learners {
+
+        right: 3%;
+
+    }
+
+
+    .rating {
+
+        right: 3%;
+
+    }
+
+
+    .hero-quote {
+
+        right: 2%;
+
+        bottom: 15px;
+
+    }
+
+
+    /* BENEFITS */
+
+    .benefit-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* CURRICULUM */
+
+    .curriculum-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .course-video {
+
+        order: -1;
+
+    }
+
+
+    .video-image {
+
+        height: 310px;
+
+    }
+
+
+    /* REVIEWS */
+
+    .review-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* CTA */
+
+    .cta-box {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .cta-text {
+
+        min-width:
+            calc(100% - 60px);
+
+    }
+
+
+    .cta-button {
+
+        width: 100%;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 22px);
+
+    }
+
+
+    .brand {
+
+        width: 92px;
+
+    }
+
+
+    .brand img {
+
+        width: 92px;
+
+    }
+
+
+    .hero {
+
+        padding-top: 35px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 11px;
+
+        max-width: 340px;
+
+    }
+
+
+    .hero-features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 17px;
+
+    }
+
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+    .primary-button {
+
+        width: 100%;
+
+    }
+
+
+    .hero-right {
+
+        height: 415px;
+
+    }
+
+
+    .person-container {
+
+        width: 305px;
+
+        height: 400px;
+
+    }
+
+
+    .floating-card {
+
+        transform:
+            scale(.80);
+
+    }
+
+
+    .learners {
+
+        right: -13px;
+
+        top: 25px;
+
+    }
+
+
+    .rating {
+
+        right: -13px;
+
+        top: 102px;
+
+    }
+
+
+    .hero-quote {
+
+        width: 174px;
+
+        right: -7px;
+
+        bottom: 5px;
+
+        padding: 12px;
+
+    }
+
+
+    .hero-quote p {
+
+        font-size: 8px;
+
+    }
+
+
+    .section {
+
+        padding:
+            52px 0;
+
+    }
+
+
+    .section-title {
+
+        margin-bottom: 26px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .benefit-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .benefit-card {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .video-image {
+
+        height: 225px;
+
+    }
+
+
+    .video-stats {
+
+        width: 95%;
+
+        padding: 14px 7px;
+
+    }
+
+
+    .video-stats strong {
+
+        font-size: 10px;
+
+    }
+
+
+    .video-stats span {
+
+        font-size: 7px;
+
+    }
+
+
+    .cta-box {
+
+        padding: 20px;
+
+    }
+
+
+    .cta-text h2 {
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .modal-video {
+
+        height: 250px;
+
+    }
+
+}
